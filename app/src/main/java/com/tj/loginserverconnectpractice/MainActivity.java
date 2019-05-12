@@ -55,6 +55,30 @@ public class MainActivity extends BaseActivity {
 
                                 JSONObject data = json.getJSONObject("data");
 
+                                JSONObject user = data.getJSONObject("user");
+
+//                                프사 경로
+                                String profile_image = user.getString("profile_image");
+//                                사용자 이름
+                                String name = user.getString("name");
+//                                보유 잔고
+                                int balance = user.getInt("balance");
+
+//                                은행 로고를 따기 전에 bank_code JSONObject 부터
+                                JSONObject bank_code = user.getJSONObject("bank_code");
+
+//                                은행 정보 안에 있는 로고 경로
+
+                                String logo = bank_code.getString("logo");
+//                                 은행 이름
+                                String bankName = bank_code.getString("name");
+
+                                String billing_account = user.getString("billing_account");
+
+
+
+
+
 
 
                             }
